@@ -1,4 +1,4 @@
-class Time
+class Application
 
   def call(evn)
     resp = Rack::Response.new
