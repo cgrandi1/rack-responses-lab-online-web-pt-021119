@@ -7,11 +7,11 @@ class Application
     morning = Kernal.rand(0...11.59)
     afternoon = Kernal.rand(12...23.59)
 
-    if time == 0...11.59 
+    if time == 0...11.59
       resp.write "Good morning"
-    else 
+    else
       resp.write "Good Afternoon"
-    end 
+    end
 
     resp.finish
 end
