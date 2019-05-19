@@ -3,15 +3,14 @@ class Application
   def call(evn)
     resp = Rack::Response.new
 
-    time = Time.now.hour(0...23.59)
-    morning = Time.now.hour(0...11.59)
+    time = Time.now.hour
 
 
 
     resp.write "#{time}"
 
 
-    if time == morning
+    if time == >12
       resp.write "Good Morning"
     else
       resp.write "Good Afternoon"
