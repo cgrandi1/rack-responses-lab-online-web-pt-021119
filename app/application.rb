@@ -3,9 +3,9 @@ class Application
   def call(evn)
     resp = Rack::Response.new
 
-    time = Kernal.rand(0...23.59)
-    morning = Kernal.rand(0...11.59)
-    afternoon = Kernal.rand(12...23.59)
+    time = Kernel.rand(0...23.59)
+    morning = Kernel.rand(0...11.59)
+    afternoon = Kernel.rand(12...23.59)
 
     if time == morning
       resp.write "Good morning"
@@ -14,5 +14,5 @@ class Application
     end
 
     resp.finish
-  end 
+  end
 end
